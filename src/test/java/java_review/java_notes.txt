@@ -1,0 +1,301 @@
+Java:
+
+	String: Sequence of characters, Immutable(cannot change the value of object once created)
+
+	String str = "hello";
+	str = "Hi"; //another string object in memory
+
+	StringBuilder: Sequence of characters, Mutable
+
+	For loop: Repeating, number of iterations is fixed
+
+	While loop: Repeating, number of iterations is unknown
+
+	For each loop: Only works with a data structure
+		number of iterations and the iteration order are fixed
+
+	Branching Statements:
+
+		Continue: skips the iteration
+
+		Break: exits the loop
+
+
+	Arrays: Data Structure
+		Supports any data types
+		Size is fixed. Faster
+		Can be multi-dimensional
+
+
+
+	Custom Methods: Set of instructions that can perform a task
+
+			improves the reusability, reduces the duplication of our codes
+
+
+	Method overloading: Multiple methods having the same method name
+
+						Parameters MUST be different
+
+    Method overriding: Methods with same name and same parameters.
+    Overridden in Sub class. Method is inherited
+
+	Constructor: Used when we create objects from the class.
+				Execution depends on the creation of object
+                - special method with same name as class-name and no return type
+
+	Class & Object:
+
+			Class is template of objects. Where all the objects came from. No memory allocated for the classes
+
+			Object is an instance of the class. each object has its own memory
+
+
+	Static vs Instance:
+
+		Instance: belong to the object. each object has its own instance
+
+		Static: belong to the class. ALl objects will share the same copy
+
+
+	Access Modifiers:
+
+			private < default < protected < public
+
+			private: visible within the class ONLY
+
+			default: visible within the same package ONLY
+
+			protected: Always visible within the same package.
+					   Visible outside the package to the sub class
+
+		    public: always visible
+
+
+	OOP Encapsulations: hiding the data by declaring them private.
+
+						Use public getters/setters to read/write the data
+
+						Gives us full control over the data
+
+						Getters: Read ONLY
+								Returns t6he value of the private variable
+								0 parameters
+
+						Setters: Write Only
+								 Does not return any data
+								 1 parameter
+
+
+				In my framework, I used it in POJO/Model classes
+								created multiple variables private
+								genrated getters/setters
+
+
+
+	OOP Inheritance: Building parent & child relationship among the classes.
+
+						classA extends classB
+
+						classA implements interfaceA
+
+						classA extends classB implements interfaceC
+
+
+						Subclass (child): can inherit all the visible variables and methods
+
+						Superclass (parent): does not inherit anything
+
+
+				In My framework:
+
+					BasePage: store common elements, and methods for all pages
+						public BasePage(){
+							PageFactory.initElements(driver, this);
+						}
+
+						LoginPage extends BasePage:
+
+						HomePage extends Page:
+
+
+	Method Overriding: giving different implementation to the method
+
+						MUST happen in sub-class
+
+						Method name, returnType & parameters must be same
+						Access modifier needs to be same or more visible
+						- covariant return type -> sub-type of parent return type. parent Book - sub -> AudioBook
+
+						can not override: private, final, and static
+
+						toString()
+
+
+
+	Final keyword: unchangeable
+		Classes: can not be extended
+		Variables: can not re-assigned
+		Methods: can not be overridden
+
+
+	OOP Abstraction: Hiding the implementation details
+
+			Ignore small details, focus on essentials
+
+
+			Abstract class: meant to be parent class. only contains the common variables & methods
+						Properties:
+							Methods: can have static & non static methods, abstract methods, constructor.
+
+							Variables: can have static & non-static variables
+
+						BasePage
+
+
+			Interface: For providing additional methods
+
+				Properties:
+					methods: abstract methods, static method, default method
+
+					variables: public static & final
+
+            --> Single best advantage Interface - supports Multiple Inheritance.
+
+				JavaScriptExecuter
+				TakeScreenShot
+				WebDriver
+
+				List
+				Set
+				Map
+
+				Connection
+				Statement
+				ResultSet
+
+
+
+	OOP Polymorphism: Many forms.
+					 PARENT REFERENCING TO CHILD OBJECTS
+        -> Reference type can be super class and object type is any sub-class
+
+		public static WebDriver getDriver(){
+
+			... return Chrome;
+
+			... return Firefox;
+
+			... return Safari;
+		}
+
+
+	 Reference Type Castings: Casting one reference type to another. (There must be inheritance relation)
+
+	 	Upcasting: smaller type to larger
+
+	 	DownCasting: casting larger type to smaller
+
+
+	 	WebDriver driver = could be any browser objects;
+
+	 	((JavaScriptExecuter)driver).executeScript();
+
+	 	((TakeScreenShot)driver).takeScreenShot();
+
+
+
+	Exceptions: Issues within the code
+
+		checked: Compile time exceptions, occurs during the compile time, can not run codes
+				 Can be handled by try&catch. throws
+
+		unchecked: Runtime exception, only occurs during the runtime
+					Can be handled by try&catch
+
+
+		NullPointer
+		IndexOutOfBounds
+		ClassCast
+		TimeOut
+		StaleElement
+		NoSuchElement
+		WebDriverException
+		...
+
+
+	Exception handlings:
+
+			1. Try & catch:
+
+					try{
+						exception code
+					}catch(e){
+
+					}finally{
+
+					}
+
+
+
+			2. throws: in the method signature
+
+
+
+	final vs finally vs finalize:
+
+		final: keyword. used for restricting classes, methods and variables
+
+		finally: block, can be used with try7catch.
+
+		finalize: method. used by the garbage collector to clear the unrefrenced objects
+
+
+	Garbage collection & Garbage collector:
+
+			Garbage Collection: Collection of unreferenced objects
+
+			Garbage Collector: process of removing the objects from the heap that are eligible for garbage collection
+
+			WebDriver driver = new ChromeDriver();
+
+			driver = null;
+
+    Data structure: Arrays, Collections framework.
+
+	Collections: dynamic sized
+		        only supports non-primitives
+
+	        List (I): Allow Duplicates, Has Index, ordered
+
+	        	ArrayList: Fastest in retriving the element(internally uses array)
+
+	        Set (I): Does not allow duplicates, does not have index.
+
+	        	HashSet: Faster in retriving the element. random ordered
+
+
+		LIFO: Stack
+		FIFO: Queue
+
+
+
+	Iterable & Iterator: for removing objects of a collection while looping through collection
+
+		hasNext
+		next()
+		remove()
+    For each loop, we cannot remove object while looping
+
+	Maps (I): Collection of pairs (key & value)
+		  Dynamic sized
+		  Key must be unique
+
+		HashMap: Faster. random ordered
+
+	  	LinkedHashMap: Insertion order
+
+
+		Convert Json object to Java
+
+		Properties file
