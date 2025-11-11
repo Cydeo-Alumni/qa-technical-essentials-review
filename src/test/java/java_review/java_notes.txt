@@ -162,7 +162,7 @@ Java:
 
             --> Single best advantage Interface - supports Multiple Inheritance.
 
-				JavaScriptExecuter
+				JavaScriptExecutor
 				TakeScreenShot
 				WebDriver
 
@@ -179,7 +179,9 @@ Java:
 	OOP Polymorphism: Many forms.
 					 PARENT REFERENCING TO CHILD OBJECTS
         -> Reference type can be super class and object type is any sub-class
-
+        Parent obj = new Child();
+        List<String> list = new ArrayList<>();
+        List<String> list = new LinkedList<>();
 		public static WebDriver getDriver(){
 
 			... return Chrome;
@@ -238,7 +240,7 @@ Java:
 
 
 
-			2. throws: in the method signature
+			2. throws: in the method signature. Used to ignore/declare checked exception
 
 
 
@@ -246,7 +248,7 @@ Java:
 
 		final: keyword. used for restricting classes, methods and variables
 
-		finally: block, can be used with try7catch.
+		finally: block, can be used with try-catch. Code always runs
 
 		finalize: method. used by the garbage collector to clear the unrefrenced objects
 
