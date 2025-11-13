@@ -25,31 +25,36 @@ GROUP BY DEPARTMENT_ID
 HAVING COUNT(*)<5
 ORDER BY COUNT(*) DESC ;
 
+-- TASK 5 - Display first_name and last_name from CUSTOMER table which is matching with address and phone data from ADDRESS table
+--inner join
 SELECT * FROM CUSTOMER;
 SELECT * FROM ADDRESS;
 
---inner join
 SELECT FIRST_NAME, LAST_NAME, ADDRESS, PHONE
 FROM CUSTOMER JOIN ADDRESS
                     ON CUSTOMER.ADDRESS_ID = ADDRESS.ADDRESS_ID;
 
+-- TASK 6 - Display all first_name and last_name from CUSTOMER table with both matching and non-matching data, regardless of whether there is a matching address and phone number in the address table.
 --left join
 SELECT FIRST_NAME, LAST_NAME, ADDRESS, PHONE
 FROM CUSTOMER LEFT JOIN ADDRESS
                    ON CUSTOMER.ADDRESS_ID = ADDRESS.ADDRESS_ID;
 
+-- TASK 7 - Display all address and phone data from ADDRESS table with both matching and non-matching data, regardless of whether there is first_name and last_name from CUSTOMER table.
 --right join
 SELECT FIRST_NAME, LAST_NAME, ADDRESS, PHONE
 FROM CUSTOMER RIGHT JOIN ADDRESS
                         ON CUSTOMER.ADDRESS_ID = ADDRESS.ADDRESS_ID;
 
+-- TASK 8 - Display all matching records from both tables(ADDRESS and CUSTOMER), plus all unique (non-matching) records from each table.
+--full join
 SELECT FIRST_NAME, LAST_NAME, ADDRESS, PHONE
 FROM ADDRESS FULL JOIN CUSTOMER
                     ON CUSTOMER.ADDRESS_ID=ADDRESS.ADDRESS_ID;
 
 
-
---How many employees are working in each region ?
+-- TASK 9 - How many employees are working in each region ?
+--joins with five tables
 SELECT R.REGION_NAME, COUNT(*)
 FROM EMPLOYEES E
          JOIN DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
