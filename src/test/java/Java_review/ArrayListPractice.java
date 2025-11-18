@@ -1,4 +1,4 @@
-package java_review;
+package Java_review;
 
 import java.util.*;
 

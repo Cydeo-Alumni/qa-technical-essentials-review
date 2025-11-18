@@ -1,4 +1,4 @@
-package java_review;
+package Java_review;
 
 public class StringsPractice {
     public static void main(String[] args) {
