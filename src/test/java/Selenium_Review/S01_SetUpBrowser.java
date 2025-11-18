@@ -3,12 +3,9 @@ package Selenium_Review;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.safari.SafariDriver;
 
-public class SetUpBrowser {
+public class S01_SetUpBrowser {
 
     /*
     MAC ---> COMMAND + N
@@ -25,8 +22,8 @@ public class SetUpBrowser {
         driver.manage().window().maximize();
         driver.get("https://practice.cydeo.com");
 
-
         driver.quit();
+
 
     }
 
@@ -40,9 +37,7 @@ public class SetUpBrowser {
           return  new FirefoxDriver();
 
         }
-
         return null;
-
 
     }
 }
