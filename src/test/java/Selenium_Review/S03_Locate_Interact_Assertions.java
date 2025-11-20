@@ -45,6 +45,7 @@ public class S03_Locate_Interact_Assertions {
         String username="test_user"+faker.name().firstName()+faker.number().numberBetween(1,1000);
 
         System.out.println("username = " + username);
+        //TODO HOMEWORK
         //You will create a method to save your usernames in a txt file
 
 
@@ -82,6 +83,7 @@ public class S03_Locate_Interact_Assertions {
         loginApp(driver,username,username);
         //Verify the user logged in
 
+        //TODO HOMEWORK
         //Ty to create a method to solve that problem about sync issue
         //Yuo will create a loop to handle this issue.
         String nameofuser = driver.findElement(By.id("nameofuser")).getText();
