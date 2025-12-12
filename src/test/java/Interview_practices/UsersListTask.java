@@ -3,6 +3,9 @@ package Interview_practices;
 import java.util.*;
 
 public class UsersListTask {
+
+    private User user; //HAS-A relation
+
     public static void main(String[] args) {
         List<User> allUsers = new ArrayList<>();
         allUsers.add(new User(1, "Alice", "alice@example.com", true));
