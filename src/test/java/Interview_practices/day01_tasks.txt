@@ -8,7 +8,6 @@
    { id: 4, name: "Diana", email: "diana@example.com", isActive: true }
    ];
 
-
    Tasks:
    Write a function to find all active users.
    Write a function to check if all user emails contain the "@" symbol.
