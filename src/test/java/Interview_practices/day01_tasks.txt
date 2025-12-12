@@ -1,0 +1,18 @@
+
+1) Scenario: You have an array of user objects. Each user has an id, name, email, and isActive (boolean).
+
+   [
+   { id: 1, name: "Alice", email: "alice@example.com", isActive: true },
+   { id: 2, name: "Bob", email: "bob@example.com", isActive: false },
+   { id: 3, name: "Charlie", email: "charlie@example.com", isActive: true },
+   { id: 4, name: "Diana", email: "diana@example.com", isActive: true }
+   ];
+
+
+   Tasks:
+   Write a function to find all active users.
+   Write a function to check if all user emails contain the "@" symbol.
+   Write a function that returns a list of just the names of inactive users.
+
+2) Find first duplicate value in array
+https://leetcode.com/problems/find-the-duplicate-number/description/
