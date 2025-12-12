@@ -8,7 +8,7 @@ public class UsersListTask {
         allUsers.add(new User(1, "Alice", "alice@example.com", true));
         allUsers.add(new User(2, "Bob", "bob@example.com", false));
         allUsers.add(new User(3, "Charlie", "charlie@example.com", true));
-        allUsers.add(new User(4, "Diana", "diana@example.com", true));
+        allUsers.add(new User(4, "Diana", "diana@example.com", false));
         System.out.println(allUsers);
 
         System.out.println("--Active users--");
@@ -16,6 +16,9 @@ public class UsersListTask {
 
         System.out.println("--All emails valid--");
         System.out.println(allEmailsValid(allUsers));
+
+        System.out.println("--Inactive users names");
+        System.out.println(getInactiveUserNames(allUsers));
 
     }
 
@@ -36,5 +39,15 @@ public class UsersListTask {
             }
         }
         return true;
+    }
+
+    public static List<String> getInactiveUserNames(List<User> usersList) {
+        List<String> names = new ArrayList<>();
+        for (User user : usersList) {
+            if (!user.isActive()) {
+                names.add(user.getName());
+            }
+        }
+        return names;
     }
 }
