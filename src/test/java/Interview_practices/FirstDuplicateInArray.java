@@ -32,6 +32,11 @@ public class FirstDuplicateInArray {
             } else {
                 set.add(each);
             }
+            /*
+            if (!set.add(each)) {
+                return each;
+            }
+             */
         }
         throw new RuntimeException("Duplicate number not found");
     }
