@@ -14,6 +14,9 @@ public class UsersListTask {
         allUsers.add(new User(4, "Diana", "diana@example.com", false));
         System.out.println(allUsers);
 
+        List<User> activeUsers = allUsers.stream().filter(u -> u.isActive()).toList();
+        System.out.println("activeUsers = " + activeUsers);
+
         System.out.println("--Active users--");
         System.out.println(getActiveUsers(allUsers));
 

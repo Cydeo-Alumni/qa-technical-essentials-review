@@ -15,3 +15,6 @@
 
 2) Find first duplicate value in array
 https://leetcode.com/problems/find-the-duplicate-number/description/
+
+3) Write a method that returns sum of digits in a String
+
