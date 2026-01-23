@@ -18,3 +18,14 @@ https://leetcode.com/problems/find-the-duplicate-number/description/
 
 3) Write a method that returns sum of digits in a String
 
+4) Sum of digits in a String as a whole:
+"abc10hf-3ll" -> 7
+"abc25hf5ll-10#$" -> 25 + 5 - 10 -> 20
+
+5) reverse array without using another array
+
+6) equilibrium index of array. sum of right and left numbers are equal
+
+[2, 3, 5, 1, 4] => 2
+[10, 0, 3, 3, 3, 1] => 1
+[2, 2, 6, 1, 5, 5] => 3
